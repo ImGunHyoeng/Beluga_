@@ -2,9 +2,8 @@
 
 
 #include "Dog/DogPlayer.h"
-#include "Dog/DogMoster.h"
-#include "/Script/Beluga.DogMonster"
-void UDogPlayer::Attack(UDogMonster* Target)
+#include "Dog/DogMonster.h"
+bool UDogPlayer::Attack(UDogMonster* Target)
 {
 
 	return Target->TakeDamage(AttackPower);

@@ -4,12 +4,12 @@
 #include "Dog/DogMonster.h"
 #include "Dog/DogPlayer.h"
 
-void UDogMonster::TakeDamage(int32 Damage)
+bool UDogMonster::TakeDamage(int32 Damage)
 {
-	UE_LOG(LogTemp, Warning, TEXT("데미지 받음");]
+	UE_LOG(LogTemp, Warning, TEXT("데미지 받음"))
 	/*if (Damage > CurrentHP)
 		return true;*/
-	FMath::Clamp(CurrentHP - Damage, 0, 100); //(CurrentHP - Damage)
+	CurrentHP=FMath::Clamp(CurrentHP - Damage, 0, 100); //(CurrentHP - Damage)
 	if(CurrentHP==0)
 		return true;//죽음
 	return false;

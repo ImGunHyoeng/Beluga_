@@ -16,7 +16,7 @@ class BELUGA_API UDogPlayer : public UDogCreature
 public:
 	UDogPlayer();
 	UFUNCTION(BlueprintCallable)
-	void Attack(UDogMonster* Target);
+	bool Attack(UDogMonster* Target);
 public:
 	UPROPERTY(BlueprintReadWrite, EditDefaultsonly, Category = "Default")
 		int32 AttackPower;

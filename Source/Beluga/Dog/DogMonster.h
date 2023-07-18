@@ -15,7 +15,7 @@ class BELUGA_API UDogMonster : public UDogCreature
 	GENERATED_BODY()
 public:
 	UFUNCTION(BlueprintCallable)
-	void TakeDamage(int32 Damage);
+	bool TakeDamage(int32 Damage);
 public:
 	UPROPERTY(BlueprintReadWrite, EditDefaultsonly, Category = "Default")
 	bool NewVar;
